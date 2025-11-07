@@ -1,3 +1,40 @@
+// require module
+var connect = require('connect')
+ 
+// create app
+var app = connect()
+
+function HomePage(req,res,next)
+{
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, World!');
+}
+app.use('/Piratheesh Gunaseelan' ,website);
+app.listen(3000);
+console.log('Server is running on local host')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const http = require('http');
 
 const hostname = '127.0.0.1';
