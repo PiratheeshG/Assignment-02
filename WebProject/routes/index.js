@@ -14,19 +14,19 @@ router.get('/home', function(req, res, next) {
 
 /* About */
 router.get('/about', (req, res) => {
-  res.render('index', { 
+  res.render('about', { 
     title: 'About' });
 });
 
 /* Projects */
 router.get('/projects', (req, res) => {
-  res.render('index', { 
+  res.render('projects', { 
     title: 'Projects' });
 });
 
 /* Contact */
 router.get('/contact', (req, res) => {
-  res.render('index', { 
+  res.render('contact', { 
     title: 'Contact' });
 });
 
