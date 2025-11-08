@@ -1,24 +1,19 @@
 {
-  "name": "assignment-02",
-  "version": "1.0.0",
-  "description": "Website's Node",
-  "homepage": "https://github.com/PiratheeshG/Assignment-02#readme",
-  "bugs": {
-    "url": "https://github.com/PiratheeshG/Assignment-02/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PiratheeshG/Assignment-02.git"
-  },
-  "license": "ISC",
-  "author": "Piratheesh Gunaseelan",
-  "type": "commonjs",
-  "main": "index.js",
+  "name": "webproject",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server.js"
   },
   "dependencies": {
-    "connect": "^3.7.0",
-    "express": "^5.1.0"
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "bootstrap": "^5.3.8",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.7.1",
+    "morgan": "~1.9.1"
   }
 }
