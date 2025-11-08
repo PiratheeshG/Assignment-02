@@ -1,63 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
-   <link rel='stylesheet' href='/content/app.css' />
-   <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css" />
-   <link rel='stylesheet' href="/@fortawesome/fontawesome-free/css/all.min.css" />
-</head>
-
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="/"> Piratheesh Gunaseelan</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto">
-
-        <li class="nav-item">
-          <% if (title == 'Home') { %>
-            <a class="nav-link active" href="/home"><i class="fa-solid fa-house"></i> Home</a>
-          <% } else { %>
-            <a class="nav-link" href="/home"><i class="fa-solid fa-house"></i> Home</a>
-          <% } %>
-        </li>
-
-        <li class="nav-item">
-          <% if (title == 'About') { %>
-            <a class="nav-link active" href="/about"><i class="fa-solid fa-book"></i> About</a>
-          <% } else { %>
-            <a class="nav-link" href="/about"><i class="fa-solid fa-book"></i> About</a>
-          <% } %>
-        </li>
-
-        <li class="nav-item">
-          <% if (title == 'Projects') { %>
-            <a class="nav-link active" href="/projects"><i class="fa-solid fa-list-check"></i> Projects</a>
-          <% } else { %>
-            <a class="nav-link" href="/projects"><i class="fa-solid fa-list-check"></i> Projects</a>
-          <% } %>
-        </li>
-
-        <li class="nav-item">
-          <% if (title == 'Contact') { %>
-            <a class="nav-link active" href="/contact"><i class="fa-regular fa-address-card"></i> Contact</a>
-          <% } else { %>
-            <a class="nav-link" href="/contact"><i class="fa-regular fa-address-card"></i> Contact</a>
-          <% } %>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
 <main>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -65,15 +7,5 @@
   </div>
 </div>
 </main>
-
-<nav class="navbar fixed-bottom navbar-dark bg-dark">
-  <h6 class="navbar-text">&copy; Copyright 2025. </h6>
-</nav>
-
-    <script src = "/script/app.js"></script>
-    <script src = "/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src = "/jquery/dist/jquery.min.js"></script>
-</body>
-
-</html>
-
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>
