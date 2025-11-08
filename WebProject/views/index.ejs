@@ -11,8 +11,38 @@
 
 <body>
 
-<nav class="navbar navbar-dark bg-dark">
-  <!-- Navbar content -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">Piratheesh Gunaseelan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link <%= title === 'Home' ? 'active' : '' %>" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= title === 'About' ? 'active' : '' %>" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= title === 'Projects' ? 'active' : '' %>" href="/projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <%= title === 'Contact' ? 'active' : '' %>" href="/contact">Contact</a>
+        </li>
+      </ul>
+
+      <span class="navbar-text ms-lg-3">
+        <a href="https://github.com/piratheesh" target="_blank" class="text-light me-2"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/piratheesh-gunaseelan" target="_blank" class="text-light"><i class="fab fa-linkedin"></i></a>
+      </span>
+    </div>
+  </div>
+</nav>
+
 </nav>
 
  <h1><%= title %></h1>
