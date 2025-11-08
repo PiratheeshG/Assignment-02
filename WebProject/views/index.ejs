@@ -7,46 +7,69 @@
   <title><%= title %></title>
    <link rel='stylesheet' href='/content/app.css' />
    <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css" />
+   <link rel='stylesheet' href="/@fortawesome/fontawesome-free/css/all.min.css" />
 </head>
 
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="/">Piratheesh Gunaseelan</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand fw-bold" href="/"> Piratheesh Gunaseelan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link <%= title === 'Home' ? 'active' : '' %>" href="/">Home</a>
-        </li>
+      <ul class="navbar-nav ms-auto">
+
         <li class="nav-item">
-          <a class="nav-link <%= title === 'About' ? 'active' : '' %>" href="/about">About</a>
+          <% if (title == 'Home') { %>
+            <a class="nav-link active" href="/home"><i class="fa-solid fa-house"></i> Home</a>
+          <% } else { %>
+            <a class="nav-link" href="/home"><i class="fa-solid fa-house"></i> Home</a>
+          <% } %>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link <%= title === 'Projects' ? 'active' : '' %>" href="/projects">Projects</a>
+          <% if (title == 'About') { %>
+            <a class="nav-link active" href="/about"><i class="fa-solid fa-book"></i> About</a>
+          <% } else { %>
+            <a class="nav-link" href="/about"><i class="fa-solid fa-book"></i> About</a>
+          <% } %>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link <%= title === 'Contact' ? 'active' : '' %>" href="/contact">Contact</a>
+          <% if (title == 'Projects') { %>
+            <a class="nav-link active" href="/projects"><i class="fa-solid fa-list-check"></i> Projects</a>
+          <% } else { %>
+            <a class="nav-link" href="/projects"><i class="fa-solid fa-list-check"></i> Projects</a>
+          <% } %>
+        </li>
+
+        <li class="nav-item">
+          <% if (title == 'Contact') { %>
+            <a class="nav-link active" href="/contact"><i class="fa-regular fa-address-card"></i> Contact</a>
+          <% } else { %>
+            <a class="nav-link" href="/contact"><i class="fa-regular fa-address-card"></i> Contact</a>
+          <% } %>
         </li>
       </ul>
-
-      <span class="navbar-text ms-lg-3">
-        <a href="https://github.com/piratheesh" target="_blank" class="text-light me-2"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/piratheesh-gunaseelan" target="_blank" class="text-light"><i class="fab fa-linkedin"></i></a>
-      </span>
     </div>
   </div>
 </nav>
 
+<main>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Welcome to the <%= title %> page</h1>
+  </div>
+</div>
+</main>
+
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+  <h6 class="navbar-text">&copy; Copyright 2025. </h6>
 </nav>
 
- <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
     <script src = "/script/app.js"></script>
     <script src = "/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src = "/jquery/dist/jquery.min.js"></script>
